@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#11142b">
-  <title>Hello, World!</title>
+  <title>Akash Karanam</title>
   <style>
     :root {
       color-scheme: dark;
@@ -156,14 +156,14 @@
   <div class="orb one" aria-hidden="true"></div>
   <div class="orb two" aria-hidden="true"></div>
   <nav aria-label="Main navigation">
-    <a href="helloworld.html" aria-current="page">Home</a>
+    <a href="index.html" aria-current="page">Home</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
   </nav>
   <main>
-    <div class="eyebrow"><span class="spark" aria-hidden="true">✦</span> A little something special</div>
-    <h1>Hello,<br><span>World!</span></h1>
-    <p>A fresh start, a bright idea, and a whole world of possibilities. Here’s to making something wonderful.</p>
+    <div class="eyebrow"><span class="spark" aria-hidden="true">✦</span> Welcome to my page</div>
+    <h1><span>Akash Karanam</span></h1>
+    <p>Welcome to my personal page. Explore to learn more about me and my qualifications.</p>
     <button id="helloButton" type="button"><span aria-hidden="true">✧</span> Say hello</button>
     <div id="message" aria-live="polite"></div>
   </main>
@@ -172,6 +172,9 @@
     const message = document.querySelector("#message");
     button.addEventListener("click", () => {
       message.textContent = "Hello right back at you! ✨";
+      window.setTimeout(() => {
+        window.location.href = "about.html";
+      }, 800);
     });
   </script>
 </body>
