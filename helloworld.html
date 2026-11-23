@@ -20,7 +20,8 @@
       margin: 0;
       display: grid;
       place-items: center;
-      overflow: hidden;
+      overflow-x: hidden;
+      padding: 6rem 1rem 2rem;
       background:
         radial-gradient(ellipse at 16% 18%, #5142a244, transparent 34rem),
         radial-gradient(ellipse at 86% 82%, #08a9a633, transparent 30rem),
@@ -59,6 +60,30 @@
       backdrop-filter: blur(18px);
       animation: arrive 900ms cubic-bezier(.2,.8,.2,1) both;
     }
+
+    nav {
+      position: fixed;
+      z-index: 2;
+      top: 1.25rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: .35rem;
+      padding: .4rem;
+      border: 1px solid #ffffff20;
+      border-radius: 999px;
+      background: #171a32cc;
+      backdrop-filter: blur(14px);
+    }
+    nav a {
+      padding: .65rem 1rem;
+      border-radius: 999px;
+      color: #c9c8e5;
+      text-decoration: none;
+      font-size: .9rem;
+      transition: background 180ms ease, color 180ms ease;
+    }
+    nav a:hover, nav a[aria-current="page"] { color: #fff; background: #ffffff16; }
 
     .eyebrow {
       display: inline-flex;
@@ -130,6 +155,11 @@
 <body>
   <div class="orb one" aria-hidden="true"></div>
   <div class="orb two" aria-hidden="true"></div>
+  <nav aria-label="Main navigation">
+    <a href="helloworld.html" aria-current="page">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
   <main>
     <div class="eyebrow"><span class="spark" aria-hidden="true">✦</span> A little something special</div>
     <h1>Hello,<br><span>World!</span></h1>
